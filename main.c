@@ -10,7 +10,7 @@ typedef struct Point {
 Point *random_walk(int number_of_steps){
     Point *pts = malloc(sizeof(Point) * number_of_steps);
     pts[0] = (Point) {0, 0};
-    for (int i = 0; i < number_of_steps; i++){
+    for (int i = 1; i < number_of_steps; i++){
         Point p = pts[i-1];
         int r = GetRandomValue(0,3);
         switch (r)
